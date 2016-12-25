@@ -15,7 +15,7 @@
             email : lc.email,
             password : lc.password
           }).then(function(){
-            window.location('/')
+            console.log('login passed');
           }).catch(function(err){
               if(err.status == 400 || 404){
                   toastr.error('Invalid Credentials','Error',{
