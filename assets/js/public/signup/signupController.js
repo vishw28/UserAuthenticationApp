@@ -16,8 +16,7 @@
       $http.post('/signup',{
         name : sc.name,
         email : sc.email,
-        password : sc.password,
-        password2 : sc.password2
+        password : sc.password
       }).then(function(response){
           window.location = '/user'
       }).catch(function (err) {
