@@ -9,7 +9,18 @@
  */
 
 module.exports = {
-    checkUser : function (req,res) {
+
+  getUser : function (req,res) {
+    console.log('running getuser');
+    User.findOne({id: req.session.me},function (err,user) {
+        if(err){
+          res.negotiate(err);
+        }
+        return res.send(user);
+    })
+  },
+
+  checkUser : function (req,res) {
         if(!req.session.me){
             return res.view('login');
         }
@@ -17,5 +28,6 @@ module.exports = {
             return res.view('dashboard');
         }
     }
+
 };
 

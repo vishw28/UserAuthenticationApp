@@ -5,10 +5,17 @@
   'use strict'
 
   angular.module('DashModule')
-    .controller('DashController',[DashController]);
+    .controller('DashController',DashController);
 
-    function DashController() {
-
+    function DashController($http) {
+        var dc = this;
+        dc.getUser = function () {
+          $http.get('/getuser').then(function (user) {
+                dc.user = user.data;
+            }).catch(function (err) {
+                console.log(err);
+            })
+        }
     }
 
 })();
