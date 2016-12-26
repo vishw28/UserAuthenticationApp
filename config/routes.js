@@ -31,16 +31,13 @@ module.exports.routes = {
   * `assets` directory)                                                      *
   *                                                                          *
   ***************************************************************************/
-  'GET /': {
-    view: 'login'
-  },
-  'GET /signup': {
-    view: 'signup'
-  },
+  'GET /': {view: 'login'},
+  'GET /signup': {view: 'signup'},
   'GET /dashboard': 'DashController.checkUser',
   'GET /getuser': 'DashController.getUser',
   'POST /signup': 'UserController.signup',
-  'PUT /login': 'UserController.login'
+  'PUT /login': 'UserController.login',
+  'GET /logout': 'UserController.logout'
 
 
   /***************************************************************************
