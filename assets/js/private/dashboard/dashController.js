@@ -1,0 +1,14 @@
+/**
+ * Created by Vishw on 12/25/2016.
+ */
+(function () {
+  'use strict'
+
+  angular.module('DashModule')
+    .controller('DashController',[DashController]);
+
+    function DashController() {
+
+    }
+
+})();

@@ -16,6 +16,7 @@
             password : lc.password
           }).then(function(){
             console.log('login passed');
+            window.location = '/dashboard';
           }).catch(function(err){
               if(err.status == 400 || 404){
                   toastr.error('Invalid Credentials','Error',{
